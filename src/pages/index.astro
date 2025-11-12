@@ -1,0 +1,49 @@
+---
+import YogaLayout from '../layouts/YogaLayout.astro';
+import Taube from '../assets/taube.svg';
+import lichtmeditationaudio from '../assets/Lichtmeditation.mp3';
+import { Image } from "astro:assets";
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<YogaLayout>
+	<div slot="banner" style="display: flex; justify-content: center;">
+		<img
+            src="https://static.wixstatic.com/media/b27fe4_49ab2ff03cad4f6bb25672645eba226b~mv2.png/v1/fill/w_993,h_257,al_c,lg_1,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/b27fe4_49ab2ff03cad4f6bb25672645eba226b~mv2.png"
+            alt=""
+			width="993px"
+            srcset="https://static.wixstatic.com/media/b27fe4_49ab2ff03cad4f6bb25672645eba226b~mv2.png/v1/fill/w_993,h_257,al_c,lg_1,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/b27fe4_49ab2ff03cad4f6bb25672645eba226b~mv2.png 5x"
+            fetchpriority="high"
+			style="box-shadow: 0 0 10px #d9900b; margin: 1em;"
+        />
+	</div>
+
+<div class="text-[#D3DA99] flex-row">
+  <!-- Zitat -->
+  <blockquote class="max-w-2xl text-center italic text-xl md:text-2xl leading-relaxed text-white/90 md:m-8">
+    “Sraddha - das unerschütterliche Vertrauen -
+    schenkt uns Energie,
+    uns an unsere Visionen zu erinnern.”
+  </blockquote>
+<p class="text-sm text-white/70 w-full text-right max-w-2xl">    Yogasutra I,20 (Sriram)
+  </p>
+
+  <div class="mt-10 flex flex-col md:flex-row items-center gap-8 md:m-8 mb-8">
+    <!-- Lichtmeditation Audio -->
+    <div class="flex flex-col items-start m-12">
+      <p class="mb-1 text-[#D3DA99] text-sm">Lichtmeditation</p>
+      <audio controls class="w-56 h-8 rounded-none bg-[#4B1D10]">
+        <source src={lichtmeditationaudio} type="audio/mpeg" />
+        Dein Browser unterstützt das Audioelement nicht.
+      </audio>
+    </div>
+
+    <!-- <img src="/src/assets/taube.svg" alt="Friedenstaube" /> -->
+     <Image src={Taube} alt="Friedenstaube"/>
+  </div>
+</div>
+		
+</YogaLayout>

@@ -1,0 +1,98 @@
+---
+const { pathname } = Astro.url;
+
+const links = [
+  { href: "/yoga-im-atemfluss/", label: "yoga im atemfluss" },
+  { href: "/yoga-im-atemfluss/person", label: "Persönliches" },
+  { href: "/yoga-im-atemfluss/yoga-tradition", label: "Yoga / Tradition" },
+  { href: "/yoga-im-atemfluss/yoga-individuell", label: "Yoga individuell" },
+  { href: "/yoga-im-atemfluss/kurse", label: "Yoga am Samstag" },
+  { href: "/yoga-im-atemfluss/meditation", label: "Yoga am Mittwoch" },
+  { href: "/yoga-im-atemfluss/workshops", label: "Supervision" },
+  { href: "/yoga-im-atemfluss/literatur", label: "Literatur" },
+];
+---
+
+<!-- Wrapper -->
+<div class="relative md:sticky md:top-4 h-fit self-end">
+  <!-- Toggle -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+  <!-- Burger Button -->
+  <label
+    for="menu-toggle"
+    class="md:hidden flex items-center gap-2 px-3 py-2 border border-[#e8a780] rounded text-[#e8a780]
+           hover:bg-[#e8a780]/20 cursor-pointer z-40 relative"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+    Menü
+  </label>
+
+  <!-- Overlay (schließt Menü bei Klick) -->
+  <label
+    for="menu-toggle"
+    class="fixed inset-0 bg-black/40 hidden peer-checked:block md:hidden z-30 cursor-pointer transition-opacity duration-200"
+  ></label>
+
+  <!-- Sidebar -->
+  <nav
+    id="sidebar"
+    class="peer-checked:translate-x-0 -translate-x-[150%] md:translate-x-0 transition-all duration-300 ease-in-out
+           w-[250px] bg-[#878f68] p-4 rounded-md shadow-md md:bg-transparent md:shadow-none fixed md:static top-16 left-4 md:left-0 md:flex-none z-40"
+  >
+    <div class="flex flex-col border-t-2 border-[#f6c083] mt-4">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            data-astro-prefetch
+            class={`block border-b-2 border-[#f6c083] px-[10px] py-[6px]
+                   transition-colors hover:text-white ${
+                     pathname.replace(/\/$/, "") ===
+                     link.href.replace(/\/$/, "")
+                       ? "text-white"
+                       : "text-[#cdd99e]"
+                   }`}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</div>
+
+<style>
+  #sidebar {
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+</style>
+
+<script is:inline>
+  if (typeof window !== "undefined") {
+    const toggle = document.getElementById("menu-toggle");
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (toggle) toggle.checked = false;
+      });
+    });
+
+    window.addEventListener("astro:page-load", () => {
+      if (toggle) toggle.checked = false;
+    });
+  }
+</script>

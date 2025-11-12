@@ -1,0 +1,80 @@
+---
+import Sprechblase from "../components/Sprechblase.astro";
+import YogaLayout from "../layouts/YogaLayout.astro";
+import Portrait from "../assets/portrait.jpg";
+import { Image } from "astro:assets";
+---
+
+<YogaLayout>
+  <div class="text-white">
+    <div class="flex flex-col md:flex-row">
+      <div class="md:pl-24">
+        <h2 class="font-semibold text-xl text-shadow-lg/20 mb-4">Petra Vogt</h2>
+        <ul class="md:w-[400px]">
+          <li>Jahrgang 1954</li>
+          <li>
+            1994-1998 Ausbildung zur Yogalehrerin beim <a
+              href="http://www.yoga.de/"
+              class="underline">BDY</a
+            > (Berufsverband der Yogalehrenden in Deutschland)
+          </li>
+          <li>1998-2000 Yoga Sutra bei R. Sriram</li>
+          <li>
+            2001-2003 Yoga im Einzelunterricht bei R. Sriram (therapeutische
+            Anwendung von Yoga)
+          </li>
+        </ul>
+      </div>
+      <div class="shrink-0">
+        <Image
+          src={Portrait}
+          alt="Petra Vogt"
+          class="w-[260px] h-auto rounded-md object-cover shadow-2xl border-2 border-[#a1a132] m-4 mx-auto"
+        />
+      </div>
+    </div>
+    <section class="md:w-[750px] text-justify md:m-8 md:mt-16">
+      <p>
+        Während der ersten Ausbildungsjahre habe ich Erfahrungen bei
+        verschiedenen Lehrern und in unterschiedlichen Stilen gesammelt u.a.
+        einige intensive Jahre bei Anna Trökes.
+      </p>
+      <p>
+        Aus Begeisterung für den Atem lerne, praktiziere und unterrichte ich in
+        der Tradition Krishnamacharya/ Desikachar.
+      </p>
+      <p>
+        Seit 1998 lerne ich bei meinem Lehrer R. Sriram im Einzelunterricht, in
+        Weiterbildungen und Supervision.
+      </p>
+      <p>
+        Mein Wissen aus Fortbildungen zu Yoga und Ayurveda fließt in den
+        Unterricht mit ein und kommt besonders dem Einzelunterricht zugute.
+      </p>
+    </section>
+    <div class="my-4">
+      <Sprechblase>
+        Yoga ist für mich der ganzheitlichste Übungsweg, der mich in guten
+        Zeiten beflügelt, in weniger guten trägt und die Tiefe des Lebens
+        verstehen lässt.
+      </Sprechblase>
+    </div>
+    <section class="md:w-[750px] text-justify md:m-8">
+      <p>
+        Von Herzen danke ich all meinen Lehrern, die mich an ihrem reichen
+        Wissen teilhaben lassen und mich immer wieder unterstützt und bestärkt
+        haben.
+      </p>
+
+      <p>
+        Mein besonderer Dank gilt <a
+          href="https://sampadasangha.wordpress.com/"
+          class="underline">Ursula Lyon</a
+        >, die meine grosse Sehnsucht nach Meditation gestillt hat und mir über
+        Jahrzehnte mit wertvollen Anleitungen und Hinweisen Orientierung gab.
+      </p>
+
+      ​
+    </section>
+  </div>
+</YogaLayout>

@@ -1,0 +1,94 @@
+---
+interface Props {
+    color?: string;
+}
+
+const { color = "#698c5e" } = Astro.props;
+---
+
+<div class="card md:ml-[20px]" style={`--accent: ${color}`}>
+    <div class="card-header">
+        <slot name="c-header" />
+    </div>
+
+    <div class="card-body">
+        <slot name="c-main" />
+    </div>
+
+    <div class="card-footer">
+        <slot name="c-footer" />
+    </div>
+</div>
+
+<style>
+    .card {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border-radius: 0px;
+        overflow: hidden;
+        font-family: sans-serif;
+        background-color: transparent;
+        padding: 20px;
+        display: inline-block;
+        width: auto;
+        max-width: 600px;
+        vertical-align: top;
+    }
+
+    .card-header {
+        background-color: var(--accent);
+        padding: 15px;
+        text-align: center;
+        font-weight: 600;
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 19px;
+    }
+
+    .card-body {
+        background-color: rgba(146, 156, 120, 0.85);
+        min-height: 200px;
+        padding: 15px;
+    }
+
+    .card-footer {
+        background-color: white;
+        color: var(--accent);
+        text-align: center;
+        padding: 15px;
+        font-weight: 500;
+        font-size: 19px;
+        font-family: "Helvetica", "Arial", sans-serif;
+    }
+    :global(ul) {
+        list-style: none;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    :global(ul li) {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6em;
+    }
+
+    :global(ul li::before) {
+        content: "";
+        width: 0.8em;
+        height: 0.8em;
+        background-color: color-mix(
+            in srgb,
+            var(--accent) 40%,
+            rgb(255, 247, 174)
+        );
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 0.35em;
+    }
+
+    :global(.highlight) {
+        color: color-mix(in srgb, var(--accent) 40%, rgb(255, 247, 174));
+        font-weight: 600;
+    }
+</style>

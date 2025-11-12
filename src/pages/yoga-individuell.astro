@@ -1,0 +1,87 @@
+---
+import FotoFrame from "../components/FotoFrame.astro";
+import Sprechblase from "../components/Sprechblase.astro";
+import YogaLayout from "../layouts/YogaLayout.astro";
+---
+
+<YogaLayout>
+    <div class="md:ml-16 text-white">
+        <h2 class="font-semibold text-shadow-lg/20">YOGA INDIVIDUELL</h2>
+        <p class="mt-8 text-justify">
+            Yoga dient dem Menschen in besonderer Weise, wenn eine Übungspraxis
+            auf die Einzigartigkeit dieses Menschen abgestimmt ist. Dies
+            geschieht im Einzelunterricht, der empfehlenswert ist für Menschen,
+            die
+            <ul class="text-left list-disc ml-8 mb-8">
+                <li>nicht im Gruppenunterricht üben möchten oder können</li>
+                <li>
+                    ihre Übungspraxis vertiefen möchten und sich Anregung für
+                    das eigene Üben wünschen.
+                </li>
+            </ul>
+        </p>
+
+        <Sprechblase>
+            <p>
+                In einer ersten Stunde kläre ich mit Ihnen im Gespräch und
+                anhand von ersten Übungsvorschlägen, welche Übungen Sie
+                unterstützen und fördern können und welche vorerst als nicht
+                geeignet erscheinen.
+            </p>
+            <p>
+                Dabei finden Ihr Alter, Ihr gesundheitliches Befinden und Ihre
+                Lebensphase Berücksichtigung.
+            </p>
+            <p>
+                Daraus entsteht Ihre individuelle Praxis, die sich an Ihren
+                Möglichkeiten und Bedürfnissen orientiert und selbständig geübt
+                wird.
+            </p> In weiteren Stunden - am Beginn des Einzelunterrichts hat sich ein
+            Abstand von 4-6 Wochen bewährt - wird Ihre Praxis erneut Ihren Gegebenheiten
+            angepasst und weiter entwickelt.
+        </Sprechblase>
+        <p class="mt-8 mb-8">
+            Anliegen des Yoga ist es, den Menschen in seiner Entwicklung zu
+            unterstützen, Selbstvertrauen zu stärken und Eigenverantwortung zu
+            fördern.
+        </p>
+        <div>
+            Dabei unterscheidet Yoga 3 Aspekte:
+
+            <div
+                class="grid md:grid-cols-[200px_auto] grid-cols-[auto_1fr] grid-rows-3 gap-4 md:gap-0 mt-2 md:m-8 text-[#e79639] font-semibold"
+            >
+                <span>sakti krama</span>
+                <span>Gesundheit erhalten und Potentiale entfalten </span>
+                <span>cikitsa krama </span>
+                <span>
+                    gesundheitliche Beschwerden berücksichtigen und diese
+                    günstig beeinflussen
+                </span>
+                <span>adyatmika krama</span>
+                <span>
+                    Ausrichtung auf spirituelle Inhalte, Einsicht und Meditation
+                </span>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col md:flex-row md:items-start items-center md:mt-16 mb-16 gap-8"
+        >
+            <div
+                class="bg-white/20 text-[#f8f8f8] px-4 py-4 rounded-md text-left m-4 md:m-8 ml-0"
+            >
+                <p>Termine nach Vereinbarung</p>
+                <ul>
+                    1. Einzelstunde 90min 80€<br />
+                    weitere Stunden á 60min 70€
+                </ul>
+            </div>
+
+            <FotoFrame
+                src="https://static.wixstatic.com/media/b27fe4_54a2ab9fd359431cafb3609b4d4eb4b7~mv2.png/v1/fill/w_324,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b27fe4_54a2ab9fd359431cafb3609b4d4eb4b7~mv2.png"
+                rotate={5}
+            />
+        </div>
+    </div>
+</YogaLayout>

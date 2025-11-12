@@ -1,0 +1,57 @@
+---
+import Divider from "./Divider.astro";
+---
+
+<header class="relative w-full flex p-4 items-center justify-center">
+  <!-- Hintergrundbalken -->
+  <div
+    class="absolute top-1/2 left-0 w-full h-[70px] md:h-[50px] bg-[#f6c083] -translate-y-1/2 z-0"
+  >
+  </div>
+
+  <div
+    class="relative z-10 overflow-visible flex items-center gap-4 text-xl italic text-amber-800 whitespace-nowrap overflow-hidden max-w-[850px]"
+  >
+    <div class="flex flex-col gap-2 md:flex-row overflow-visible">
+      <a
+        href="/yoga-im-atemfluss/"
+        class="flex items-center gap-2 text-[color:#8b3e10] hover:opacity-80 transition overflow-visible"
+      >
+        <em
+          class="font-semibold text-3xl translate-y-[-4px] italic leading-none"
+          >yoga</em
+        >
+        <div class="relative inline-block leading-none overflow-visible">
+          <span class="italic">im atemfluss</span>
+          <img
+            src="https://static.wixstatic.com/media/b27fe4_4a4dfa6c44604badb47782bef225d226~mv2.png"
+            alt="Logo"
+            class="absolute top-1/2 overflow-visible translate-y-[-60%] left-full ml-4 w-[49px] h-[45px] object-cover rounded-[10%] border-2 border-[#f6c083] shadow-md md:hidden"
+            fetchpriority="high"
+          />
+        </div>
+      </a>
+      <div class="flex items-center gap-2 text-xs md:text-xl">
+        <div class="hidden md:block w-1.5 h-1.5 bg-white rounded-full"></div>
+        <span>Petra Vogt</span>
+
+        <div class="hidden md:block w-1.5 h-1.5 bg-white rounded-full"></div>
+        <span>Yogalehrerin BDY/ EYU</span>
+
+        <div class="hidden md:block w-1.5 h-1.5 bg-white rounded-full"></div>
+        <span>yogaweg</span>
+      </div>
+    </div>
+
+    <img
+      src="https://static.wixstatic.com/media/b27fe4_4a4dfa6c44604badb47782bef225d226~mv2.png"
+      alt="Logo"
+      class="hidden md:block w-[93px] h-[83px] object-cover rounded-[10%] border-2 border-[#f6c083] shadow-md mx-auto"
+      fetchpriority="high"
+    />
+  </div>
+</header>
+
+<div class="hidden md:block">
+  <Divider />
+</div>

@@ -1,0 +1,47 @@
+---
+import Footer from "../components/Footer.astro";
+import NavigatorBox from "../components/NavigatorBox.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/yoga-im-atemfluss/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>yoga im atemfluss</title>
+  </head>
+
+  <body
+    class="bg-[#878f68] min-h-screen w-full grid grid-rows-[auto_1fr_auto] text-[#f3f0d2] font-sans"
+  >
+    <!-- HEADER -->
+    <div class="">
+        <Header />
+      <div class="">
+        <slot name="banner" />
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main
+      class="px-4 flex flex-col md:flex-row items-center md:items-start gap-4 mx-auto w-full md:max-w-[1000px] relative "
+    >
+      <div class="sticky top-4 z-30 bg-[#878f68] self-end md:self-auto">
+        <NavigatorBox />
+      </div>
+      <!-- Inhalt -->
+      <div class="w-full md:w-[750px]">
+        <slot />
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="w-full">
+      <Footer />
+    </div>
+  </body>
+</html>

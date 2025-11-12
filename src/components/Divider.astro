@@ -1,0 +1,46 @@
+<div class="bevel-line md:mt-8 mb-4 md:mb-12"></div>
+
+<style>
+  .bevel-line {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 -2px 3px rgba(255, 255, 255, 0.5),
+      0 2px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+
+  .shadow-line {
+    width: 100%;
+    height: 10px;
+    box-shadow:
+      0 -60px 80px -60px rgba(255, 255, 255, 0.8),
+      0 6px 8px -6px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1; 
+  }
+
+  .h-divider {
+    margin: auto;
+    margin-top: 80px;
+    width: 80%;
+    position: relative;
+  }
+
+  .h-divider .shadow {
+    overflow: hidden;
+    height: 20px;
+    box-shadow: 0 0 20px red;
+  }
+
+  .h-divider .shadow:after {
+    content: "";
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 0 0 18px black;
+  }
+</style>

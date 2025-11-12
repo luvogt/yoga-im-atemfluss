@@ -1,0 +1,38 @@
+---
+import Card from "../components/Card.astro";
+import YogaLayout from "../layouts/YogaLayout.astro";
+---
+
+<YogaLayout>
+    <Card color="#b04e2b">
+        <div slot="c-header">
+            Samstag 14 - 18:00 Uhr ........... 2025<span class="highlight"
+                >*</span
+            >
+        </div>
+        <div slot="c-main" class="text-center">
+            <p class="highlight">Supervision</p>
+            <p class="m-4 text-justify">
+                Supervisionstermine für den yogaweg sind sowohl fester
+                Bestandteil der Yogatherapie- Weiterbildung, als auch ein
+                offenes Angebot für alle Interessierten, die Yoga in der
+                Tradition unterrichten und Einzelunterricht geben.
+            </p>
+            <p class="mt-4 ml-4 text-left">
+                Themen:
+                <ul>
+                    <li>Fallbesprechungen</li>
+                    <li>Klärung von Fragen bzgl. des Unterrichts</li>
+                    <li>Eventuell themenorientierte Praxis</li>
+                </ul>
+            </p>
+            <p class="highlight mt-4 ml-4 text-left font-light">
+                * und nach Vereinbarung
+            </p>
+            <p class="m-4 text-left">
+                voraussichtlich im Sarasvati Yoga studio, s.u.
+            </p>
+        </div>
+        <div slot="c-footer"><strong class="mr-2">Sarasvati Yoga</strong> Bundesallee 53, 10715 Berlin</div>
+    </Card>
+</YogaLayout>

@@ -1,0 +1,49 @@
+---
+export interface Props {
+  src: string;
+  alt?: string;
+  showTape?: boolean;
+  rotate?: number;
+}
+
+const { src, alt = "Foto", showTape = true, rotate = -3 } = Astro.props;
+---
+
+<div class="photo-frame" style={`--rotate:${rotate}deg;`}>
+  <img src={src} alt={alt} class="photo" />
+  {showTape && <div class="tape" />}
+</div>
+
+<style>
+  .photo-frame {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transform: rotate(var(--rotate));
+    transition: transform 0.2s ease;
+    border-radius: 4px;
+    max-width: 100%;
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .tape {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 70px;
+    height: 22px;
+    background: rgba(255, 255, 200, 0.7);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+  }
+</style>
